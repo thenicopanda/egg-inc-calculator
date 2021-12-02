@@ -28,7 +28,13 @@ def calculateEB(soulEggs: str, prophecyEggs: Decimal, prophecyBonus: Decimal, so
         soulEggs = soulEggs * 1000000000000000000000
     elif soulEggs.endswith('S'):
         soulEggs = Decimal(soulEggs[:-1]) 
-        soulEggs = soulEggs * 1000000000000000000000000        
+        soulEggs = soulEggs * 1000000000000000000000000  
+    elif soulEggs.endswith('o'):
+        soulEggs = Decimal(soulEggs[:-1]) 
+        soulEggs = soulEggs * 1000000000000000000000000000
+    elif soulEggs.endswith('N'):
+        soulEggs = Decimal(soulEggs[:-1]) 
+        soulEggs = soulEggs * 1000000000000000000000000000000
     else:
         soulEggs = Decimal(soulEggs)
     try:
