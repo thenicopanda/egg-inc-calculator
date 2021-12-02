@@ -1,5 +1,5 @@
 def human_format(number):
-    units = ['', 'k', 'm', 'b', 'T', 'q', 'Q', 's', 'S', 'o', 'N']
+    units = ['', 'k', 'm', 'b', 'T', 'q', 'Q', 's', 'S', 'o', 'N', 'd', 'U', 'D', 'Td', 'qd', 'Qd', 'sd', 'Sd', 'Od', 'Nd', 'V', 'uV', 'dV', 'tV', 'qV', 'sV', 'SV', 'OV', 'NV', 'tT']
     k = Decimal(1000.0)
     magnitude = int(floor(log(number, k)))
     return '%.3f%s' % (number / k**magnitude, units[magnitude])
